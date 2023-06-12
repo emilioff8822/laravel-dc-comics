@@ -8,6 +8,7 @@
             <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
             <a class="nav-link" href="{{ route('contatti') }}">Contatti</a>
             <a class="nav-link" href="{{ route('comics.index') }}">Comics</a>
+            <a class="nav-link" href="{{ route('comics.create') }}">Crea un nuvo Comic</a>
         </nav>
 
     </div>
