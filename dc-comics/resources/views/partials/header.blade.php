@@ -3,10 +3,9 @@
 
 
         <nav class="nav">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Index</a>
+            <a class="nav-link" href="{{ route('contatti') }}">Contatti</a>
+            <a class="nav-link" href="#">Comics</a>
         </nav>
 
     </div>
