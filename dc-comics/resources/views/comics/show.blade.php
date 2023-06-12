@@ -11,10 +11,9 @@
             </div>
             <ul class="list-group list-group-flush mt-auto">
                 <li class="list-group-item"><strong>ID: </strong> {{ $comic->id }}</li>
-                <li class="list-group-item"><strong>Series: </strong>{{ $comic->series }}</li>
-                <li class="list-group-item"><strong>Price: </strong>{{ $comic->price }}</li>
-                <li class="list-group-item"><strong>Artists: </strong>{{ $comic->artists }}</li>
-                <td> <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-info">INFO</a></td>
+                <li class="list-group-item"><strong>Writers: </strong>{{ $comic->writers }}</li>
+                <li class="list-group-item"><strong>Sale date: </strong>{{ $comic->sale_date }}</li>
+                <li class="list-group-item"><strong>Type: </strong>{{ $comic->type }}</li>
             </ul>
         </div>
     </div>
