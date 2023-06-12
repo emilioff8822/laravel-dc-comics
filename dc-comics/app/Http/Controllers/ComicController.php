@@ -15,7 +15,7 @@ class ComicController extends Controller
     public function index()
     {
 
-    $comics = Comic::paginate(4);
+    $comics = Comic::orderBy('id', 'desc')->paginate(4);
     return view('comics.index', compact('comics'));
 
 
@@ -48,9 +48,12 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+
+
+     //usa il find implicitamente
+     public function show(Comic $comic)
     {
-        //
+    return view('comics.show', compact('comic'));
     }
 
     /**
