@@ -41,6 +41,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
     // QUI RICEVO I DATI DAL FORM DI CREATE
+    dd($request->all());
     }
 
     /**
