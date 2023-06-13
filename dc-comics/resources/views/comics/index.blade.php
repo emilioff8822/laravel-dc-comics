@@ -7,7 +7,6 @@
             @foreach ($comics as $comic)
                 <div class="col-lg-3 col-md-4 col-sm-6 d-flex  my-5">
                     <div class="card flex-fill border-info">
-                        <img src="{{ $comic->thumb }}" class="card-img-top img-fluid" alt="{{ $comic->title }}">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title mb-auto">{{ $comic->title }}</h5>
                         </div>
