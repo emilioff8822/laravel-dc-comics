@@ -14,6 +14,8 @@
                 <li class="list-group-item"><strong>Writers: </strong>{{ $comic->writers }}</li>
                 <li class="list-group-item"><strong>Sale date: </strong>{{ $comic->sale_date }}</li>
                 <li class="list-group-item"><strong>Type: </strong>{{ $comic->type }}</li>
+                <td><a href=" " class="btn btn-primary">Modifica</a></td>
+
             </ul>
         </div>
     </div>
