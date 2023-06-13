@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
+
 
 class ComicController extends Controller
 {
@@ -38,9 +40,11 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {  //PRIMA DI TUTTO VALIDO I DATI, REQUEST VALIDATE VEDE SE SONO VALIDI ALTRIMENTI REINDIRIZZA AL FORM
-    $request->validate([
+
+    /* sono commentati perche ho creato ComicRequest con il metodo php artisan make:request ComicRequest
+        $request->validate([
     'title' => 'required|min:3',
     'description' => 'required',
     'thumb' => 'required',
@@ -63,7 +67,7 @@ class ComicController extends Controller
     'type.required' => 'Il tipo è un campo obbligatorio.',
     'artists.required' => 'Gli artisti sono un campo obbligatorio.',
     'writers.required' => 'Gli scrittori sono un campo obbligatorio.',
-]);
+]); */
 
 
 
