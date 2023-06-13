@@ -152,6 +152,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        //dopo l'eliminazione del prodotto reindirizzo alla index passando in sessione l'avvenuta eliminazione con with
+        return redirect()->route('comics.index')->with('deleted', "Il comic $comic->title e' stato eliminato correttamente ");
     }
 }

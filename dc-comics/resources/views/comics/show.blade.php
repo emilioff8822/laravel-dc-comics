@@ -14,7 +14,15 @@
                 <li class="list-group-item"><strong>Writers: </strong>{{ $comic->writers }}</li>
                 <li class="list-group-item"><strong>Sale date: </strong>{{ $comic->sale_date }}</li>
                 <li class="list-group-item"><strong>Type: </strong>{{ $comic->type }}</li>
-                <td><a href=" " class="btn btn-primary">Modifica</a></td>
+                <td><a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary">Modifica</a></td>
+                <form action="{{ route('comics.destroy', $comic) }} " method="POST"
+                    onsubmit=" return confirm ('Vuoi eliminare il comic {{ $comic->title }} ?')" class="d-inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" href="{{ route('comics.destroy', $comic) }}"
+                        class="btn btn-danger">Elimina</button>
+
+                </form>
 
             </ul>
         </div>

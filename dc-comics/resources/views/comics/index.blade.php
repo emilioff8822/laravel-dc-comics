@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container-fluid">
+        @if (session('deleted'))
+            <div class="alert alert-success" role="alert">{{ session('deleted') }}</div>
+        @endif
+
+
         <div class="row justify-content-center">
 
             @foreach ($comics as $comic)
@@ -17,7 +22,19 @@
                             <li class="list-group-item"><strong>Artists: </strong>{{ $comic->artists }}</li>
                             <li class="list-group-item"><a href="{{ route('comics.show', $comic->id) }}" <td> <a
                                         href="{{ route('comics.show', $comic->id) }}" class="btn btn-info">INFO</a></td>
-                                    <td><a href=" " class="btn btn-primary">Modifica</a></td>
+                                    <td><a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary">Modifica</a>
+                                    </td>
+
+                                    <form action="{{ route('comics.destroy', $comic) }} " method="POST"
+                                        onsubmit=" return confirm ('Vuoi eliminare il comic {{ $comic->title }} ?')"
+                                        class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" href="{{ route('comics.destroy', $comic) }}"
+                                            class="btn btn-danger">Elimina</button>
+
+                                    </form>
+
 
                         </ul>
                     </div>
