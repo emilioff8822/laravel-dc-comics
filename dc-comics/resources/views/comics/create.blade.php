@@ -16,7 +16,7 @@
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
             <input name="title" type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                placeholder="Inserisci il titolo">
+                value="{{ old('title') }}" placeholder="Inserisci il titolo">
         </div>
         @error('title')
             <p class="text-danger">{{ $message }}</p>
@@ -25,7 +25,7 @@
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
             <textarea name="description" class="form-control @error('description') is-invalid @enderror" id="description"
-                placeholder="Inserisci la descrizione"></textarea>
+                placeholder="Inserisci la descrizione">{{ old('description') }}</textarea>
         </div>
         @error('description')
             <p class="text-danger">{{ $message }}</p>
@@ -34,7 +34,7 @@
         <div class="mb-3">
             <label for="thumb" class="form-label">Thumb</label>
             <input name="thumb" type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb"
-                placeholder="Inserisci l'URL della thumbnail">
+                value="{{ old('thumb') }}" placeholder="Inserisci l'URL della thumbnail">
         </div>
         @error('thumb')
             <p class="text-danger">{{ $message }}</p>
@@ -43,7 +43,7 @@
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
             <input name="price" type="text" class="form-control @error('price') is-invalid @enderror" id="price"
-                placeholder="Inserisci il prezzo">
+                value="{{ old('price') }}" placeholder="Inserisci il prezzo">
         </div>
         @error('price')
             <p class="text-danger">{{ $message }}</p>
@@ -52,7 +52,7 @@
         <div class="mb-3">
             <label for="series" class="form-label">Serie</label>
             <input name="series" type="text" class="form-control @error('series') is-invalid @enderror" id="series"
-                placeholder="Inserisci la serie">
+                value="{{ old('series') }}" placeholder="Inserisci la serie">
         </div>
         @error('series')
             <p class="text-danger">{{ $message }}</p>
@@ -61,7 +61,7 @@
         <div class="mb-3">
             <label for="sale_date" class="form-label">Data di Vendita</label>
             <input name="sale_date" type="date" class="form-control @error('sale_date') is-invalid @enderror"
-                id="sale_date">
+                value="{{ old('sale_date') }}" id="sale_date">
         </div>
         @error('sale_date')
             <p class="text-danger">{{ $message }}</p>
@@ -70,7 +70,7 @@
         <div class="mb-3">
             <label for="type" class="form-label">Tipo</label>
             <input name="type" type="text" class="form-control @error('type') is-invalid @enderror" id="type"
-                placeholder="Inserisci il tipo">
+                value="{{ old('type') }}" placeholder="Inserisci il tipo">
         </div>
         @error('type')
             <p class="text-danger">{{ $message }}</p>
@@ -79,7 +79,7 @@
         <div class="mb-3">
             <label for="artists" class="form-label">Artists</label>
             <input name="artists" type="text" class="form-control @error('artists') is-invalid @enderror" id="artists"
-                placeholder="Inserisci gli artisti (separati da virgola)">
+                value="{{ old('artists') }}" placeholder="Inserisci gli artisti (separati da virgola)">
         </div>
         @error('artists')
             <p class="text-danger">{{ $message }}</p>
@@ -88,7 +88,7 @@
         <div class="mb-3">
             <label for="writers" class="form-label">Scrittori</label>
             <input name="writers" type="text" class="form-control @error('writers') is-invalid @enderror" id="writers"
-                placeholder="Inserisci gli scrittori (separati da virgola)">
+                value="{{ old('writers') }}" placeholder="Inserisci gli scrittori (separati da virgola)">
         </div>
         @error('writers')
             <p class="text-danger">{{ $message }}</p>
